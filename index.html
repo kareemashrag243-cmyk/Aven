@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AVEN | Your Story</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  background:#0b0b0b;
+  color:#fff;
+  font-family:Arial,sans-serif;
+  overflow-x:hidden;
+}
+
+.opening{
+  position:fixed;
+  inset:0;
+  z-index:1000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:#0b0b0b;
+  transition:1s;
+}
+
+.opening-content{padding:30px}
+
+.logo{
+  font-size:14px;
+  letter-spacing:7px;
+  color:#aaa;
+  margin-bottom:25px;
+}
+
+.opening h1{
+  font-size:58px;
+  font-weight:300;
+  margin-bottom:15px;
+}
+
+.opening p{
+  color:#888;
+  margin-bottom:35px;
+}
+
+.open-btn{
+  padding:15px 40px;
+  border:1px solid #555;
+  border-radius:50px;
+  background:transparent;
+  color:#fff;
+  letter-spacing:3px;
+  cursor:pointer;
+}
+
+.open-btn:hover{
+  background:#fff;
+  color:#000;
+}
+
+#site{
+  opacity:0;
+  transition:1s;
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:flex-end;
+  padding:30px;
+  position:relative;
+  background:
+  linear-gradient(to top,#000 0%,transparent 65%),
+  url("https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1400&q=85")
+  center/cover;
+}
+
+.hero-content h2{
+  font-size:70px;
+  font-weight:300;
+}
+
+.hero-content p{
+  color:#ccc;
+  margin-top:12px;
+}
+
+/* SECTIONS */
+
+section{
+  max-width:1000px;
+  margin:auto;
+  padding:90px 25px;
+}
+
+.label{
+  font-size:11px;
+  letter-spacing:4px;
+  color:#777;
+  margin-bottom:15px;
+}
+
+.title{
+  font-size:40px;
+  font-weight:300;
+  margin-bottom:20px;
+}
+
+.text{
+  color:#999;
+  line-height:1.8;
+}
+
+/* COUNTDOWN */
+
+.countdown{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin-top:40px;
+}
+
+.time-box{
+  border:1px solid #292929;
+  padding:25px 10px;
+  text-align:center;
+}
+
+.time-box strong{
+  display:block;
+  font-size:38px;
+  font-weight:300;
+}
+
+.time-box span{
+  color:#777;
+  font-size:10px;
+  letter-spacing:2px;
+}
+
+/* GALLERY */
+
+.gallery{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.gallery img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+}
+
+.gallery img:first-child{
+  grid-column:span 2;
+  height:450px;
+}
+
+/* VIDEO */
+
+.video{
+  width:100%;
+  border-radius:5px;
+  margin-top:30px;
+  background:#111;
+}
+
+/* MUSIC */
+
+.music{
+  text-align:center;
+  border:1px solid #292929;
+  padding:35px 20px;
+}
+
+.music button{
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  border:1px solid #555;
+  background:transparent;
+  color:white;
+  font-size:20px;
+  cursor:pointer;
+}
+
+.music p{
+  color:#777;
+  margin-top:15px;
+  font-size:13px;
+}
+
+/* LINKS */
+
+.links{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-top:30px;
+}
+
+.links a{
+  text-decoration:none;
+  color:white;
+  border:1px solid #292929;
+  padding:17px;
+  text-align:center;
+}
+
+footer{
+  text-align:center;
+  padding:50px 20px;
+  border-top:1px solid #222;
+  color:#555;
+  letter-spacing:4px;
+  font-size:10px;
+}
+
+@media(max-width:600px){
+
+  .opening h1{
+    font-size:48px;
+  }
+
+  .hero-content h2{
+    font-size:55px;
+  }
+
+  .countdown{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .gallery img{
+    height:220px;
+  }
+
+  .gallery img:first-child{
+    height:320px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- OPENING SCREEN -->
+
+<div class="opening" id="opening">
+
+  <div class="opening-content">
+
+    <div class="logo">AVEN</div>
+
+    <h1>Ahmed</h1>
+
+    <p>A story worth remembering.</p>
+
+    <button class="open-btn" onclick="openSite()">
+      OPEN
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- WEBSITE -->
+
+<div id="site">
+
+  <!-- HERO -->
+
+  <div class="hero">
+
+    <div class="hero-content">
+
+      <div class="label">WELCOME TO</div>
+
+      <h2>Ahmed</h2>
+
+      <p>My story. My memories. My moments.</p>
+
+    </div>
+
+  </div>
+
+
+  <!-- MUSIC -->
+
+  <section>
+
+    <div class="label">01 — MUSIC</div>
+
+    <h3 class="title">A song for this story.</h3>
+
+    <div class="music">
+
+      <button onclick="toggleMusic()" id="musicBtn">
+        ▶
+      </button>
+
+      <p id="musicText">Tap to play</p>
+
+      <audio id="music">
+        <source src="music.mp3" type="audio/mpeg">
+      </audio>
+
+    </div>
+
+  </section>
+
+
+  <!-- COUNTDOWN -->
+
+  <section>
+
+    <div class="label">02 — COUNTDOWN</div>
+
+    <h3 class="title">The moment is coming.</h3>
+
+    <p class="text">
+      Counting down to a special moment.
+    </p>
+
+    <div class="countdown">
+
+      <div class="time-box">
+        <strong id="days">00</strong>
+        <span>DAYS</span>
+      </div>
+
+      <div class="time-box">
+        <strong id="hours">00</strong>
+        <span>HOURS</span>
+      </div>
+
+      <div class="time-box">
+        <strong id="minutes">00</strong>
+        <span>MINUTES</span>
+      </div>
+
+      <div class="time-box">
+        <strong id="seconds">00</strong>
+        <span>SECONDS</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PHOTOS -->
+
+  <section>
+
+    <div class="label">03 — MEMORIES</div>
+
+    <h3 class="title">Moments.</h3>
+
+    <p class="text">
+      A collection of beautiful memories.
+    </p>
+
+    <div class="gallery">
+
+      <img src="photo1.jpg">
+
+      <img src="photo2.jpg">
+
+      <img src="photo3.jpg">
+
+      <img src="photo4.jpg">
+
+    </div>
+
+  </section>
+
+
+  <!-- VIDEO -->
+
+  <section>
+
+    <div class="label">04 — VIDEO</div>
+
+    <h3 class="title">Watch the story.</h3>
+
+    <video class="video" controls playsinline>
+      <source src="video.mp4" type="video/mp4">
+    </video>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section>
+
+    <div class="label">05 — CONNECT</div>
+
+    <h3 class="title">Stay connected.</h3>
+
+    <p class="text">
+      Follow Ahmed or get in touch.
+    </p>
+
+    <div class="links">
+
+      <a href="#">Instagram</a>
+
+      <a href="#">TikTok</a>
+
+      <a href="#">WhatsApp</a>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+    AVEN — YOUR STORY, YOUR SPACE.
+  </footer>
+
+</div>
+
+
+<script>
+
+/* OPEN WEBSITE */
+
+function openSite(){
+
+  document.getElementById("opening").style.opacity="0";
+
+  document.getElementById("site").style.opacity="1";
+
+  setTimeout(function(){
+
+    document.getElementById("opening").style.display="none";
+
+  },1000);
+
+}
+
+
+/* MUSIC */
+
+let playing=false;
+
+function toggleMusic(){
+
+  const music=document.getElementById("music");
+  const btn=document.getElementById("musicBtn");
+  const text=document.getElementById("musicText");
+
+  if(!playing){
+
+    music.play();
+
+    btn.innerHTML="❚❚";
+    text.innerHTML="Playing";
+
+    playing=true;
+
+  }else{
+
+    music.pause();
+
+    btn.innerHTML="▶";
+    text.innerHTML="Tap to play";
+
+    playing=false;
+
+  }
+
+}
+
+
+/* COUNTDOWN */
+
+/*
+   غير التاريخ هنا لأي موعد عايزه
+*/
+
+const targetDate = new Date("December 31, 2026 23:59:59").getTime();
+
+function updateCountdown(){
+
+  const now=new Date().getTime();
+
+  const distance=targetDate-now;
+
+  if(distance<=0){
+
+    document.getElementById("days").innerHTML="00";
+    document.getElementById("hours").innerHTML="00";
+    document.getElementById("minutes").innerHTML="00";
+    document.getElementById("seconds").innerHTML="00";
+
+    return;
+  }
+
+  const days=Math.floor(distance/(1000*60*60*24));
+
+  const hours=Math.floor(
+    (distance%(1000*60*60*24))/(1000*60*60)
+  );
+
+  const minutes=Math.floor(
+    (distance%(1000*60*60))/(1000*60)
+  );
+
+  const seconds=Math.floor(
+    (distance%(1000*60))/1000
+  );
+
+  document.getElementById("days").innerHTML=days;
+  document.getElementById("hours").innerHTML=String(hours).padStart(2,"0");
+  document.getElementById("minutes").innerHTML=String(minutes).padStart(2,"0");
+  document.getElementById("seconds").innerHTML=String(seconds).padStart(2,"0");
+
+}
+
+setInterval(updateCountdown,1000);
+
+updateCountdown();
+
+</script>
+
+</body>
+</html>
